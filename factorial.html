@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Factorial</title>
+  </head>
+  <body>
+    <script>
+      function factorial(n)
+      // an ITERATIVE example of the factorial function
+      {
+        var total = 1;
+        for (var i = 0; i < n; i = i + 1)
+          // i < n ensures that i will never reach n... (n will never == i)
+        {
+          total = total * (n - i);
+          // ... and therefore we never multiply it by 0
+          console.log("Current i is: " + i);
+          console.log("Current value of total is: " + total);
+        }
+        return total;
+      }
+
+      var userstring = prompt("Number please...");
+      var usernum = parseInt(userstring);
+
+      console.log(usernum + "! is " + factorial(usernum));
+    </script>
+  </body>
+</html>
